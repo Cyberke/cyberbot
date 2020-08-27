@@ -37,4 +37,4 @@ bot.on("message", async message => {
     message.channel.send(`<a:pipa:736339378372214915> Sikeresen elküldtem **${user}**-nak/nek az üzenetet! Üzenet:\n**${szoveg}**`);
   }
 });
-bot.login(process.env.supporttoken);
+bot.login(process.env.BOT_TOKEN);
