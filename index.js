@@ -19,7 +19,8 @@ bot.on("message", async message => {
     .setTimestamp();
     if(message.channel.type == "dm") {
       let bototletcsatorna = bot.channels.cache.find(channel => channel.id == "745759349376548904");
-      bototletcsatorna.send(`${embed}\n@everyone`);
+      bototletcsatorna.send("@here");
+      bototletcsatorna.send(embed);
       message.author.send(`Üzeneted az Admin Team felé: **${message.content}**\nKérlek várj türelmesen, valaki hamarosan válaszolni fog!`);
     }
 });
