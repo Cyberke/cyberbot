@@ -37,5 +37,8 @@ bot.on("message", async message => {
     user.send(`Szia, **${message.author.tag}** válaszolt neked! Üzenete:\n**${szoveg}**`);
     message.channel.send(`<a:pipa:736339378372214915> Sikeresen elküldtem **${user.tag}**-nak/nek az üzenetet! Üzenet:\n**${szoveg}**`);
   }
+  if(cmd == `${prefix}ping`) {
+    message.channel.send(`**PONG!** A bot pingje: **${bot.ws.ping} ms**`)
+  }
 });
 bot.login(process.env.BOT_TOKEN);
