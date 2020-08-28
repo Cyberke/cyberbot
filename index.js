@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone:true});
-require('dotenv').config();
 const prefix = "c.";
 bot.on("ready", async () => {
   console.log("ok");
