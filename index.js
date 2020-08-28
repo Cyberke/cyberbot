@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone:true});
 const prefix = "c.";
 bot.on("ready", async () => {
-  console.log("ok");
+  console.log("Online");
   bot.user.setActivity(`Segítségért írj nekem privát üzenetben!`,{type: "LISTENING"});
 });
 bot.on("message", async message => {
@@ -19,8 +19,7 @@ bot.on("message", async message => {
     .setTimestamp();
     if(message.channel.type == "dm") {
       let bototletcsatorna = bot.channels.cache.find(channel => channel.id == "745759349376548904");
-      bototletcsatorna.send(embed);
-      bototletcsatorna.send("@everyone");
+      bototletcsatorna.send(`${embed}\n@everyone`);
       message.author.send(`Üzeneted az Admin Team felé: **${message.content}**\nKérlek várj türelmesen, valaki hamarosan válaszolni fog!`);
     }
 });
