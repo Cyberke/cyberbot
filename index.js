@@ -34,7 +34,7 @@ bot.on("message", async message => {
     if(!user) return message.channel.send(`<a:x_:736342460522823768> Kérlek jelöld meg azt a felhasználót, akinek elküldjem az üzenetet! (**${prefix}vá [id] [szöveg]**)`);
     if(!szoveg) return message.channel.send(`<a:x_:736342460522823768> Kérlek add meg a szöveget, amit elküldjek az adott felhasználónak! (**${prefix}vá [id] [szöveg]**)`);
     user.send(`Szia, **${message.author.tag}** válaszolt neked! Üzenete:\n**${szoveg}**`);
-    message.channel.send(`<a:pipa:736339378372214915> Sikeresen elküldtem **${user}**-nak/nek az üzenetet! Üzenet:\n**${szoveg}**`);
+    message.channel.send(`<a:pipa:736339378372214915> Sikeresen elküldtem **${user.tag}**-nak/nek az üzenetet! Üzenet:\n**${szoveg}**`);
   }
 });
 bot.login(process.env.BOT_TOKEN);
