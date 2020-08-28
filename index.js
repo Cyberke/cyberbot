@@ -29,7 +29,7 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   if(cmd == `${prefix}va` || cmd == `${prefix}vá` || cmd == `${prefix}valasz` ||cmd == `${prefix}válasz`) {
-    if(!message.member.roles.has("748816135029391413")) return message.channel.send(`<a:x_:736342460522823768> Nem tartozol az Admin Team-be!`);
+    if(!message.member.roles.cache.find(muterole => muterole.id === `748816135029391413`)) return message.channel.send(`<a:x_:736342460522823768> Nem tartozol az Admin Team-be!`);
     let user = bot.users.cache.find(user => user.id == `${args[0]}`);
     let szoveg = message.content.split(' ').slice(2).join(' ');
     if(!user) return message.channel.send(`<a:x_:736342460522823768> Kérlek jelöld meg azt a felhasználót, akinek elküldjem az üzenetet! (**${prefix}vá [id] [szöveg]**)`);
